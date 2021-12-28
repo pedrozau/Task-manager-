@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+   
+     <!-- Boostrap -->
+  
+     <!-- end boostrap -->
+     <!-- JS -->
+     <script src="script.js"></script>
+    <script src="package/dist/"></script>
+     <!-- endjs -->
+    <title>Grafico</title>
+</head>
+<body>
+    <!---- <input type="checkbox"  id="sidebar-toggle"> -->
+        <div class="sidebar">
+          <div class="sidebar-header">
+              <h3 class="brand">
+                    <span class="sidebar-icons"></span> 
+                    <span>Help-me</span> 
+             </h3>
+             <!-- <span class="sidebar-icons"><img src="images/menu.png" alt="menu-error"></span> -->
+             <!--- <label class="sidebar-icons" for="sidebar-toggle"><img src="images/menu.png" alt="menu-error"></label> -->
+        </div>
+
+           <div class="sidebar-menu">
+               <ul>
+                   <li>
+                       <a href="">
+                           <span class="sidebar-icons"><img src="images/home.png" alt="casa-error"></span>
+                           <span>Home</span>
+                        </a>
+                    </li>
+
+                   <li>
+                       <a href="">
+                           <span class="sidebar-icons"><img src="images/add.png" alt="inserir-error"></span>
+                           <span>Cadastro</span>
+                        </a>
+                       <div class="sub-menu-1">
+                           <ul>
+                               <li>
+                                   <a href="prof.html">
+                                       <span><img src="icones/professor.png" id="subMenuimgIcon" alt="professor"></span>
+                                       <span>Professor</span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="aluno.html">
+                                       <span><img src="icones/students.png" id="subMenuimgIcon" alt="estudante"></span>
+                                       <span>Aluno</span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="curso.html">
+                                       <span><img src="icones/evento.png" id="subMenuimgIcon" alt="eventoscadastrados"></span>
+                                       <span>Curso</span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="disciplina.html">
+                                       <span><img src="icones/disciplina.png" id="subMenuimgIcon" alt="eventoscadastrados"></span>
+                                       <span>Disciplina</span>
+                                   </a>
+                               </li>
+                               <li>
+                                <a href="sala.html">
+                                    <span><img src="icones/classroom.png" id="subMenuimgIcon" alt="eventoscadastrados"></span>
+                                    <span>Sala</span>
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="funcionario.html">
+                                        <span><img src="icones/people.png" id="subMenuimgIconFunc" alt="As_turmas"></span>
+                                        <span>Funcionários</span>
+                                    </a>
+                                </li>
+                           </ul>
+                       </div>
+                    </li>
+
+                    </li>
+                    <!--
+                   <li>
+                       <a href="">
+                           <span class="sidebar-icons"><img src="images/list.png" alt="list-error"></span>
+                           <span>Tarefa</span>
+                        </a></li>
+                   <li>
+                       <a href="">
+                           <span class="sidebar-icons"><img src="images/edit.png" alt="edit-error"></span>
+                           <span>Altera tarefa</span>
+                        </a></li>                   
+                   <li>
+                       <a href="">
+                           <span class="sidebar-icons"><img src="images/remove.png" alt="remove-error"></span>
+                           <span></span>
+                        </a></li>
+                    -->
+                   <li>
+                       <a href="grafico.html">
+                           <span  class="sidebar-icons"><img src="images/increase.png" alt="grafico-error"></span>
+                           <span>Grafico</span>
+                        </a></li>
+                   
+                       <!--
+                       <li>
+                       <a href="">
+                           <span class="sidebar-icons"><img src="images/print.png" alt="print-error"></span>
+                           <span>Imprimir</span>
+                       </a></li>
+                    -->
+                   <li><a href="preferencia.html">
+                       <span class="sidebar-icons"><img src="images/setting.png" alt=""></span>
+                       <span>Preferência</span>
+                    </a></li>
+                    <!--
+                    <li>
+                        <a href="">
+                            <span class="sidebar-icons"><img src="images/shutdown.png" alt="print-error"></span>
+                            <span></span>
+                     </a></li>
+                     -->
+               </ul>
+           </div>
+     </div>
+
+       <div class="main-content">
+        <header>
+            <div class="toggle"></div>
+         </header>
+
+            <main>
+                 <div class="">
+                 </div>
+               <div class="content-table"  style="margin:auto; width:800px;">
+               <canvas id="myChart"></canvas>
+            <div>
+     
+            <canvas id="thisChart" width="400" height="400"></canvas>
+            </div>
+               </div>
+            </main>
+       </div>
+
+       <script>
+         var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            label: 'My First dataset',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 10, 5, 2, 20, 30, 45]
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+
+     function g(){
+        var ctx = document.getElementById('thischart');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+      
+     }
+ g()
+
+       </script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+     <!-- Boostrap -->
+  
+     <!-- end boostrap -->
+     <!-- JS -->
+     <script src="script.js"></script>
+     <!-- endjs -->
+    <title>Help-me</title>
+</head>
+<body>
+    <!---- <input type="checkbox"  id="sidebar-toggle"> -->
+        <div class="sidebar">
+          <div class="sidebar-header">
+              <h3 class="brand">
+                    <span class="sidebar-icons"></span> 
+                    <span>Gestão de Tarefa</span> 
+             </h3>
+             <!-- <span class="sidebar-icons"><img src="images/menu.png" alt="menu-error"></span> -->
+             <!--- <label class="sidebar-icons" for="sidebar-toggle"><img src="images/menu.png" alt="menu-error"></label> -->
+        </div>
+
+           <div class="sidebar-menu">
+               <ul>
+                   <li>
+                       <a href="home.html">
+                           <span class="sidebar-icons"><img src="images/home.png" alt="casa-error"></span>
+                           <span>Home</span>
+                        </a>
+                    </li>
+
+                   <li>
+                       <a href="">
+                           <span class="sidebar-icons"><img src="icones/create_document_60px.png" alt="inserir-error"></span>
+                           <span>Cadastro</span>
+                        </a>
+                       <div class="sub-menu-1">
+                           <ul>
+                               <li>
+                                   <a href="tarefa.html">
+                                       <span><img src="icones/professor.png" id="subMenuimgIcon" alt="professor"></span>
+                                       <span>Tarefa</span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="note.html">
+                                       <span><img src="icones/students.png" id="subMenuimgIcon" alt="estudante"></span>
+                                       <span>note</span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="aula.html">
+                                       <span><img src="icones/evento.png" id="subMenuimgIcon" alt="eventoscadastrados"></span>
+                                       <span>Aula</span>
+                                   </a>
+                               </li>
+           
+                           </ul>
+                       </div>
+                    </li>
+
+                    </li>
+                    <!--
+                   <li>
+                       <a href="">
+                           <span class="sidebar-icons"><img src="images/list.png" alt="list-error"></span>
+                           <span>Tarefa</span>
+                        </a></li>
+                   <li>
+                       <a href="">
+                           <span class="sidebar-icons"><img src="images/edit.png" alt="edit-error"></span>
+                           <span>Altera tarefa</span>
+                        </a></li>                   
+                   <li>
+                       <a href="">
+                           <span class="sidebar-icons"><img src="images/remove.png" alt="remove-error"></span>
+                           <span></span>
+                        </a></li>
+                    -->
+                   <li>
+                       <a href="grafico.html">
+                           <span  class="sidebar-icons"><img src="images/increase.png" alt="grafico-error"></span>
+                           <span>Grafico</span>
+                        </a></li>
+                   
+                       <!--
+                       <li>
+                       <a href="">
+                           <span class="sidebar-icons"><img src="images/print.png" alt="print-error"></span>
+                           <span>Imprimir</span>
+                       </a></li>
+                    -->
+                   <li><a href="preferencia.html">
+                       <span class="sidebar-icons"><img src="images/setting.png" alt=""></span>
+                       <span>Preferência</span>
+                    </a></li>
+                    <!--
+                    <li>
+                        <a href="">
+                            <span class="sidebar-icons"><img src="images/shutdown.png" alt="print-error"></span>
+                            <span></span>
+                     </a></li>
+                     -->
+               </ul>
+           </div>
+     </div>
+
+       <div class="main-content">
+                 <header>
+                    <div class="toggle"></div>
+                 </header>
+
+                 <main>
+                     <div class="conteudo">
+                         
+                    <!-- modal -->
+                    <button id="open"  onclick="opened()">Novo Aula</button>
+       
+                    <div class="modal-container" id="modal-container">
+             
+                       <div class="modal">
+                        <div class="title-modal">
+                            Casdastrar Aula
+                          </div>   
+  
+                             
+                          <form action="#" method="post" class="form-prof">
+                              <div id="nome">
+                                 
+                                   <input class="primeironome" type="text" placeholder="Curso" id="nome" name="">
+                                  
+                                   
+                                  
+                              </div>
+                               
+                               
+                            
+                               <input class="salva" type="submit" value="Salvar">
+                          </form>
+                            
+             
+                              <button id="close" onclick="closed()">
+                                 &times;
+                              </button>
+                       </div>
+             
+                    </div>
+                    <!-- end modal-->
+ 
+   
+                    <div class="content-table">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Sobrenome</th>
+                                <th scope="col">Disciplina</th>
+                                <th scope="col">Telefone</th>
+                                <th scope="col">Data de nasc</th>
+                                <th scope="col">BI Nº</th>
+                                <th scope="col">Estado civil</th>
+                                <th scope="col">Sexo</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                       </div>
+          
+
+
+         </div>
+         </main>
+       </div>
+</body>
+</html>
